@@ -3,6 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDataContext>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactPolicy",
+        policy =>
+        {
+            policy
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 //POST: /api/livro/popular
@@ -132,4 +145,5 @@ app.MapGet("/api/livro/emprestados",
     return Results.NotFound("Lista de livros vazia!");
 });
 
+app.UseCors("ReactPolicy");
 app.Run();
