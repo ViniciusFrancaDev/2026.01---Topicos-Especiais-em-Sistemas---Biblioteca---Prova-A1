@@ -17,10 +17,10 @@ GET http://localhost:5063/api/livro/listar
 GET http://localhost:5063/api/livro/buscar/Orientação a Objetos
 
 ### Emprestar Livro
-PUT http://localhost:5063/api/livro/emprestar/5
+PUT http://localhost:5063/api/livro/emprestar/1
 
 ### Devolver Livro
-PUT http://localhost:5063/api/livro/devolver/5
+PUT http://localhost:5063/api/livro/devolver/1
 
 ### Livros disponíveis
 GET http://localhost:5063/api/livro/disponiveis

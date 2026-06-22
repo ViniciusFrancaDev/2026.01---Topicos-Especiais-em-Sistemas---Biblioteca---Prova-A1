@@ -7,4 +7,5 @@ public class Livro
     public string? Autor { get; set; }
     public bool EstaDisponivel { get; set; } = true;
     public DateTime CriadoEm { get; set; } = DateTime.Now;
+    public int QuantidadeEmprestimos { get; set; }
 }

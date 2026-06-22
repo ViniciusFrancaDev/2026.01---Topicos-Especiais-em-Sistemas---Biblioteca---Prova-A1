@@ -78,6 +78,8 @@ app.MapPut("/api/livro/emprestar/{id}", ([FromRoute] int id, [FromServices] AppD
         if (resultado.EstaDisponivel == true)
         {
             resultado.EstaDisponivel = false;
+            resultado.QuantidadeEmprestimos++;
+
             ctx.Livros.Update(resultado);
             ctx.SaveChanges();
             return Results.Ok("Livro Emprestado");
