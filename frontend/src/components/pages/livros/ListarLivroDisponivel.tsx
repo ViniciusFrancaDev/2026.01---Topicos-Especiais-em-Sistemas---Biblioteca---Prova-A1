@@ -3,7 +3,7 @@ import api from "../../../services/api";
 import Livro from "../../../models/Livro";
 import { Link } from "react-router-dom";
 
-function ListarLivros() {
+function ListarLivrosDisponivel() {
     const [livros, setLivros] = useState<Livro[]>([]);
 
     useEffect(() => {
@@ -64,4 +64,4 @@ function ListarLivros() {
     );
 }
 
-export default ListarLivros;
+export default ListarLivrosDisponivel;
