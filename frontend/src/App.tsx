@@ -4,6 +4,7 @@ import './App.css';
 import CadastrarLivro from './components/pages/livros/CadastrarLivro';
 import ListarLivros from './components/pages/livros/ListarLivro';
 import ListarLivrosDisponiveis from './components/pages/livros/ListarLivroDisponivel';
+import ListarLivrosEmprestados from './components/pages/livros/ListarLivroEmprestado';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
             <li>
               <Link to="pages/livro/disponiveis">Listar Livros Disponiveis</Link>
             </li>
+            <li>
+              <Link to="pages/livro/emprestados">Listar Livros Emprestados</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -31,6 +35,7 @@ function App() {
             } />
             <Route path="/pages/livro/cadastrar" element={<CadastrarLivro/>} />
             <Route path="/pages/livro/disponiveis" element={<ListarLivrosDisponiveis/>} />
+            <Route path="pages/livro/emprestados" element={<ListarLivrosEmprestados/>} />
         </Routes>
       </div>
     </BrowserRouter>
